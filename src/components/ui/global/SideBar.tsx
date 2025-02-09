@@ -41,6 +41,7 @@ export default function () {
         <h1 className="font-jacquard_24 text-3xl text-darkBrown">Forum</h1>
       </div>
 
+      {/* Drawer */}
       <aside>
         <div
           className={`flex flex-col justify-between fixed bg-lightBrown left-0 top-20 bottom-0 w-1/2 border-t-2 border-darkBrown font-jacquard_24 text-xl text-darkBrown py-3 transform transition-transform duration-300 ${
@@ -69,8 +70,13 @@ export default function () {
             </div>
           </div>
         </div>
+
+        {/* Overlay */}
         {isOpen && (
-          <div className="fixed h-full left-0 top-20 bg-black opacity-40 w-full transition-colors duration-300 z-10">
+          <div
+            className="fixed h-full left-0 top-20 bg-black opacity-40 w-full transition-colors duration-300 z-10"
+            onClick={() => setIsOpen(!isOpen)}
+          >
             {" "}
           </div>
         )}
