@@ -34,8 +34,12 @@ export default function RootLayout({
       <body
         className={`${albert_sans.variable} ${iceberg.variable} ${jacquard_24.variable} antialiased bg-darkBrown`}
       >
-        <SideBar />
-        {children}
+        <div className="w-full lg:flex">
+          <div className="w-full lg:w-[350px] lg:min-w-[350px] ">
+            <SideBar />
+          </div>
+          <main className="w-full max-w-[1570px] mx-auto">{children}</main>
+        </div>
       </body>
     </html>
   );
