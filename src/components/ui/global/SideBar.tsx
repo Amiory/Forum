@@ -5,6 +5,7 @@ import React, { useState } from "react";
 
 import HamburgerMenuIcon from "../icons/HamburgerMenuIcon";
 import LinkHover from "../icons/LinkHoverIcon";
+import HeaderIcon from "../icons/HeaderIcon";
 
 const NavLinks = [
   {
@@ -143,15 +144,19 @@ export default function () {
 
       {/* mobile */}
       <div className="w-full lg:hidden">
-        <div className="w-full bg-lightBrown h-20 px-8 flex items-center justify-between">
-          <div onClick={() => setIsOpen(!isOpen)}>
+        <div className="w-full bg-lightBrown h-20 px-8 flex items-center justify-between -z-10">
+          <div onClick={() => setIsOpen(!isOpen)} className="z-10">
             <HamburgerMenuIcon isOpen={isOpen} />
           </div>
-          <h1 className="font-jacquard_24 text-darkBrown text-3xl">Forum</h1>
+          <HeaderIcon className="w-40 absolute right-8 top-4" />
+
+          <h1 className="font-jacquard_24 text-darkBrown text-3xl z-10">
+            Forum
+          </h1>
         </div>
         {/* Drawer */}
         <div
-          className={`fixed top-0 h-full w-full ${
+          className={`fixed top-0 h-full w-full transform transition-transform z-20 ${
             isOpen ? "-translate-x-0" : "-translate-x-full"
           }`}
         >
