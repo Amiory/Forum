@@ -4,7 +4,7 @@ import Link from "next/link";
 import React, { useState } from "react";
 
 import HamburgerMenuIcon from "../icons/HamburgerMenuIcon";
-import LinkHover from "../icons/LinkHover";
+import LinkHover from "../icons/LinkHoverIcon";
 
 const NavLinks = [
   {

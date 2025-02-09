@@ -9,8 +9,14 @@ export default {
   theme: {
     extend: {
       colors: {
-        background: "var(--background)",
-        foreground: "var(--foreground)",
+        darkBrown: "#2E1818",
+        lightBrown: "#623C1A",
+        wheat: "#E3B072",
+      },
+      fontFamily: {
+        albert_sans: ["var(--font-albert_sans)"],
+        iceberg: ["var(--font-iceberg)"],
+        jacquard_24: ["var(--font-jacquard_24)"],
       },
     },
   },
